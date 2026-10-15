@@ -1,52 +1,112 @@
+
 <!DOCTYPE html>
+
+<!-- تحديد أن المستند مكتوب بلغة HTML -->
 <html lang="ar" dir="rtl">
+
 <head>
+    <!-- تحديد ترميز UTF-8 لدعم اللغة العربية والرموز -->
     <meta charset="UTF-8">
+
+    <!-- جعل الصفحة متجاوبة مع أحجام الشاشات المختلفة، مثل الجوال والكمبيوتر -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- عنوان الصفحة الذي يظهر في لسان المتصفح -->
     <title>قائمة تنقل متجاوبة</title>
+
+    <!-- ربط ملف CSS المسؤول عن تنسيق الصفحة والألوان والأحجام والتجاوب -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- ربط ملف JavaScript المسؤول عن التفاعل مع الصفحة -->
+    <!-- defer تعني تنفيذ JavaScript بعد تحليل HTML، مما يسمح بقراءة عناصر الصفحة أولًا -->
     <script src="script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- رأس الموقع: يحتوي على اسم الموقع وزر القائمة وروابط التنقل -->
     <header class="site-header">
+
+        <!-- اسم الموقع، وعند الضغط عليه ينتقل المستخدم إلى القسم الذي يحمل id="home" -->
         <a href="#home" class="brand">أحمد زعكان</a>
 
-        <button class="menu-toggle"
-        type="button"
-        aria-label="فتح القائمة"
-        aria-expanded="false"
-        aria-controls="site-navigation"
+        <!-- زر فتح وإغلاق قائمة التنقل، ويُستخدم عادةً في شاشات الجوال -->
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false"
+            aria-controls="site-navigation"
         >
+
+            <!-- هذه العناصر الثلاثة تمثل الخطوط الثلاثة لرمز القائمة ☰ -->
             <span></span>
             <span></span>
             <span></span>
+
         </button>
 
-        <nav class="site-nav" id="site-navigation" aria-label="فتح القائمة">
-            <a href="#home" class="nav-link" aria-current="location">الرئسية</a>
+        <!-- قائمة التنقل الرئيسية، ومعرّفها يسمح لزر القائمة بالتحكم فيها -->
+        <nav
+            class="site-nav"
+            id="site-navigation"
+            aria-label="فتح القائمة"
+        >
+
+            <!-- رابط الانتقال إلى القسم الرئيسي -->
+            <!-- nav-link صنف CSS يمكن استخدامه لتنسيق الرابط -->
+            <!-- aria-current يحدد العنصر الحالي ضمن مجموعة الروابط -->
+            <a href="#home" class="nav-link" aria-current="location">
+                الرئسية
+            </a>
+
+            <!-- رابط الانتقال إلى قسم الدروس -->
             <a href="#lessons" class="nav-link">الدروس</a>
+
+            <!-- رابط الانتقال إلى قسم التعريف بالمشروع -->
             <a href="#about" class="nav-link">عن المشروع</a>
+
         </nav>
+
     </header>
 
+    <!-- المحتوى الرئيسي للصفحة -->
     <main>
+
+        <!-- القسم الأول من الصفحة، ومعرّفه home ليستهدفه رابط الرئيسية -->
         <section class="page-section" id="home">
+
+            <!-- العنوان الرئيسي للقسم -->
             <h1>قائمة تنقل متجاوبة</h1>
-            <p>اضغط زر القائمة على الهاتف </p>
+
+            <!-- نص توضيحي يظهر أسفل العنوان -->
+            <p>اضغط زر القائمة على الهاتف</p>
+
         </section>
 
+        <!-- القسم الثاني: الدروس -->
         <section class="page-section" id="lessons">
+
+            <!-- عنوان قسم الدروس -->
             <h2>الدروس</h2>
-            <p>اضغط زر القائمة على الهاتف </p>
+
+            <!-- وصف أو تعليمات للمستخدم -->
+            <p>اضغط زر القائمة على الهاتف</p>
+
         </section>
 
-
+        <!-- القسم الثالث: معلومات عن المشروع -->
         <section class="page-section" id="about">
-            <h2>الدروس</h2>
-            <p>اضغط زر القائمة على الهاتف </p>
-        </section>
 
+            <!-- عنوان قسم المشروع -->
+            <h2>عن المشروع</h2>
+
+            <!-- وصف أو تعليمات للمستخدم -->
+            <p>اضغط زر القائمة على الهاتف</p>
+
+        </section>
 
     </main>
+
 </body>
 </html>
